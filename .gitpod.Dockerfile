@@ -1,7 +1,8 @@
 FROM python:3.10-slim
 
-# Install required tools
+# Install git, Chrome, and other required tools
 RUN apt-get update && apt-get install -y \
+    git \
     wget \
     curl \
     unzip \
@@ -12,3 +13,4 @@ RUN apt-get update && apt-get install -y \
 
 # Add Chrome to PATH
 ENV PATH="/usr/lib/chromium/:$PATH"
+
